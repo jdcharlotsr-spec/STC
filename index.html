@@ -659,6 +659,122 @@
                         </form>
                     </div>
                 </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Order Form: Episcopal Consecration Booklet</button>
+                <div class="accordion-content">
+                    <div class="form-padding">
+                        <form action="https://formspree.io/f/mzdarwzb" method="POST">
+                            <input type="hidden" name="_subject" value="New Order: Consecration Booklet">
+                            
+                            <div class="section-title"><i class="fas fa-user-check"></i> Contact Person</div>
+                            <div class="form-row">
+                                <div class="form-group"><label>Name</label><input type="text" name="contactName" required></div>
+                                <div class="form-group"><label>Number</label><input type="tel" name="contactPhone" required></div>
+                                <div class="form-group"><label>Email</label><input type="email" name="contactEmail" required></div>
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-user-graduate"></i> Bishop-Designate Information</div>
+                            <div class="form-row">
+                                <div class="form-group"><label>Designate Name</label><input type="text" name="designateName" required></div>
+                                <div class="form-group"><label>Church Name</label><input type="text" name="churchName" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label>Designate Email</label><input type="email" name="designateEmail"></div>
+                                <div class="form-group"><label>Designate Phone</label><input type="tel" name="designatePhone"></div>
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-users-rays"></i> The Consecrators</div>
+                            <div class="form-group">
+                                <label>Chief Consecrator</label>
+                                <input type="text" name="chiefConsecrator" placeholder="Full Name and Title">
+                            </div>
+                            <label>Co-Consecrators (List up to 6)</label>
+                            <div class="checkbox-grid" style="grid-template-columns: 1fr 1fr;">
+                                <input type="text" name="coConsecrator1" placeholder="1. Name/Title">
+                                <input type="text" name="coConsecrator2" placeholder="2. Name/Title">
+                                <input type="text" name="coConsecrator3" placeholder="3. Name/Title">
+                                <input type="text" name="coConsecrator4" placeholder="4. Name/Title">
+                                <input type="text" name="coConsecrator5" placeholder="5. Name/Title">
+                                <input type="text" name="coConsecrator6" placeholder="6. Name/Title">
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-calendar-alt"></i> Service Details</div>
+                            <div class="form-row">
+                                <div class="form-group"><label>Date of Consecration</label><input type="date" name="consecrationDate"></div>
+                                <div class="form-group"><label>Location</label><input type="text" name="consecrationLocation" placeholder="Church Name & Address"></div>
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-book-open"></i> Program Content & Bios</div>
+                            <small style="display:block; margin-bottom:10px; color:var(--primary-navy);">*If you provide basic info, we will supplement bios if necessary.</small>
+                            <div class="form-group"><label>Program Contents</label><textarea name="progContent" rows="3"></textarea></div>
+                            <div class="form-group"><label>Consecrator Bios</label><textarea name="consecratorBios" rows="3"></textarea></div>
+                            <div class="form-group"><label>Bishop Designate(s) Bios</label><textarea name="designateBios" rows="3"></textarea></div>
+                            <div class="form-group"><label>Homilist Bio</label><textarea name="homilistBio" rows="3"></textarea></div>
+                            <div class="form-group"><label>Special Thanks / Acknowledgements</label><textarea name="specialThanks" rows="3"></textarea></div>
+
+                            <div class="section-title"><i class="fas fa-print"></i> Booklet Specs</div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Page Count</label>
+                                    <select name="pageCount">
+                                        <option value="4">4 Pages</option>
+                                        <option value="8">8 Pages</option>
+                                        <option value="12">12 Pages</option>
+                                        <option value="16">16 Pages</option>
+                                    </select>
+                                </div>
+                                <div class="form-group"><label>Quantity</label><input type="number" name="quantity" min="25" step="25"></div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Consecration Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">Order Form: Church Social Media Flyer</button>
+                <div class="accordion-content">
+                    <div class="form-padding">
+                        <form action="https://formspree.io/f/mzdarwzb" method="POST">
+                            <input type="hidden" name="_subject" value="New Order: Social Media Flyer">
+                            <div class="form-row">
+                                <div class="form-group"><label>Event Name</label><input type="text" name="eventName" required></div>
+                                <div class="form-group"><label>Date/Time</label><input type="text" name="eventDateTime" required></div>
+                            </div>
+                            <div class="form-group"><label>Event Location/Link</label><input type="text" name="eventLocation"></div>
+                            <div class="form-group"><label>Details / Key Speakers / Theme</label><textarea name="flyerDetails" rows="4"></textarea></div>
+                            <div class="form-group"><label>Preferred Color Scheme</label><input type="text" name="flyerColors"></div>
+                            <button type="submit" class="submit-btn">Submit Flyer Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">Order Form: License/Ordination Certificates</button>
+                <div class="accordion-content">
+                    <div class="form-padding">
+                        <form action="https://formspree.io/f/mzdarwzb" method="POST">
+                            <input type="hidden" name="_subject" value="New Order: Certificates">
+                            <div class="form-group"><label>Recipient Name(s)</label><textarea name="recipientNames" rows="2" placeholder="List names exactly as they should appear"></textarea></div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Type</label>
+                                    <select name="certType">
+                                        <option value="Licensure">Ministerial Licensure</option>
+                                        <option value="Ordination">Ordination Certificate</option>
+                                        <option value="Consecration">Consecration Certificate</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group"><label>Date of Ceremony</label><input type="date" name="certDate"></div>
+                            </div>
+                            <div class="form-group"><label>Signatory Names/Titles</label><textarea name="signatories" rows="2" placeholder="e.g. Bishop John Doe, Presiding"></textarea></div>
+                            <button type="submit" class="submit-btn">Submit Certificate Order</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
