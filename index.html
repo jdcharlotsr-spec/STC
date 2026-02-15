@@ -21,6 +21,9 @@
             --error: #c0392b;
             --warning-bg: #fff3cd;
             --info-bg: #d1ecf1;
+            --email-bg: #e3f2fd;
+            --email-border: #90caf9;
+            --email-text: #0d47a1;
         }
 
         body {
@@ -58,9 +61,10 @@
         nav .links a:hover { color: var(--accent-gold); }
 
         /* Header */
-        .header-logo-space { padding: 80px 20px; background: var(--light-bg); border-bottom: 1px solid var(--border-color); text-align: center; }
-        .logo-placeholder { width: 800px; max-width: 90%; height: 250px; margin: 0 auto 3rem; display: flex; align-items: center; justify-content: center; }
-        .logo-placeholder img { max-width: 100%; height: auto; }
+        .header-logo-space { padding: 60px 20px; background: var(--light-bg); border-bottom: 1px solid var(--border-color); text-align: center; }
+        .logo-container { width: 100%; max-width: 800px; margin: 0 auto 2rem; }
+        .logo-container img { width: 100%; height: auto; max-height: 300px; object-fit: contain; }
+        
         .hero-text { max-width: 900px; margin: 0 auto; font-size: 1.25rem; color: var(--primary-navy); text-align: center; font-style: italic; font-family: 'Times New Roman', serif; border-left: 4px solid var(--accent-gold); padding: 20px 40px; background: rgba(179, 147, 89, 0.05); }
 
         h2 { font-family: 'Times New Roman', serif; color: var(--primary-navy); font-size: 2.2rem; text-align: center; margin-top: 4rem; margin-bottom: 3rem; position: relative; text-transform: uppercase; letter-spacing: 1px; }
@@ -68,8 +72,10 @@
 
         /* Mockup Grid */
         .mockup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin: 3rem 0; }
-        .placeholder-box { background: #fafafa; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #888; transition: var(--transition); text-align: center; padding: 20px; box-shadow: var(--shadow); }
-        
+        .mockup-box { background: #fafafa; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #888; transition: var(--transition); text-align: center; padding: 20px; box-shadow: var(--shadow); overflow: hidden;}
+        .mockup-box img { max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .mockup-caption { margin-top: 15px; font-weight: bold; color: var(--primary-navy); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+
         /* Accordion */
         .accordion-section { margin: 4rem 0; }
         .accordion-item { border: 1px solid #e0e0e0; margin-bottom: 1rem; background: var(--white); border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
@@ -105,9 +111,12 @@
         .policy-box { padding: 20px; border-radius: 4px; margin-bottom: 15px; }
         .policy-revision { background-color: var(--warning-bg); color: #856404; border: 1px solid #ffeeba; }
         .policy-payment { background-color: var(--info-bg); color: #0c5460; border: 1px solid #bee5eb; }
+        
+        /* New Email Box Style */
+        .policy-email { background-color: var(--email-bg); color: var(--email-text); border: 1px solid var(--email-border); text-align: center; }
+        .policy-email a { color: var(--email-text); text-decoration: underline; font-weight: bold; }
+
         .certification-box { background-color: #fdf2f2; border: 1px solid #eecaca; padding: 20px; border-radius: 4px; margin-top: 20px; }
-        .file-upload-wrapper { border: 2px dashed #ccc; padding: 20px; text-align: center; background: #fff; cursor: pointer; transition: border-color 0.3s; }
-        .file-upload-wrapper:hover { border-color: var(--accent-gold); }
 
         .submit-btn { background: var(--primary-navy); color: var(--white); padding: 18px; width: 100%; border: 2px solid var(--primary-navy); font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: 0.3s; margin-top: 30px; }
         .submit-btn:hover { background: var(--accent-gold); border-color: var(--accent-gold); color: var(--primary-navy); }
@@ -133,8 +142,8 @@
     </nav>
 
     <header class="header-logo-space" id="home">
-        <div class="logo-placeholder">
-            <img src="Header-logo.png" alt="Sacred Trust Consulting Logo" style="max-width:100%; height:auto;">
+        <div class="logo-container">
+            <img src="header-logo.png" alt="Sacred Trust Consulting Main Logo">
         </div>
         <div class="hero-text">
             Sacred Trust Consulting understands the importance of establishing high quality, professional identities for Churches and Bishops. While providing one-on-one consulting, we deliver affordable high-profile designs that can be applied to any stationary, advertising or promotional items.
@@ -148,13 +157,13 @@
             <div style="text-align: center; max-width: 850px; margin: 0 auto;">
                 <p>The Art of Heraldry has existed for centuries. Giving Kings & noblemen representative imagery for their stature & position. In accordance with the same philosophy, Sacred Trust Consulting creates Crests & Emblems that demonstrate symbolically the ideology of both the individual and organization.</p>
                 <div class="mockup-grid">
-                    <div class="placeholder-box">
-                        <strong>[ HERALDRY MOCKUP ]</strong>
-                        <p>Representative Seals & Emblems</p>
+                    <div class="mockup-box">
+                        <img src="seal-mockup.png" alt="Bishop Seal Example">
+                        <div class="mockup-caption">Representative Seals & Emblems</div>
                     </div>
-                    <div class="placeholder-box">
-                        <strong>[ PROGRAM MOCKUP ]</strong>
-                        <p>Dignified Homegoing Services</p>
+                    <div class="mockup-box">
+                        <img src="program-mockup.jpg" alt="Funeral Program Example">
+                        <div class="mockup-caption">Dignified Homegoing Services</div>
                     </div>
                 </div>
             </div>
@@ -331,7 +340,7 @@
                 <button class="accordion-header">Order Form: Funeral Programs</button>
                 <div class="accordion-content">
                     <div class="form-padding">
-                        <form action="https://formspree.io/f/mzdarwzb" method="POST" enctype="multipart/form-data">
+                        <form action="https://formspree.io/f/mzdarwzb" method="POST">
                             <input type="hidden" name="_subject" value="New Order: Funeral Program">
                             
                             <div class="section-title"><i class="fas fa-address-book"></i> 1. Family Point of Contact</div>
@@ -574,19 +583,12 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label>Primary Cover Photo (High Quality)</label>
-                                <div class="file-upload-wrapper">
-                                    <input type="file" name="coverPhoto" accept="image/*" required>
-                                    <small style="display:block;">Upload main photo (JPG/PNG)</small>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>Collage Photos (Max 10)</label>
-                                <div class="file-upload-wrapper">
-                                    <input type="file" name="collagePhotos[]" accept="image/*" multiple>
-                                    <small style="display:block;">Hold 'Ctrl'/'Cmd' to select multiple</small>
-                                </div>
+                            <div class="policy-box policy-email">
+                                <h3 style="margin-top: 0; color: #0d47a1;"><i class="fas fa-envelope"></i> Photo Submission</h3>
+                                <p style="font-size:0.95rem;"><strong>The file upload function is currently disabled.</strong></p>
+                                <p>Please email your <strong>Cover Photo</strong> and any <strong>Collage Photos</strong> directly to:<br>
+                                <a href="mailto:houstonfuneralprograms@gmail.com">houstonfuneralprograms@gmail.com</a></p>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;"><em>Please include the <strong>Name of the Deceased</strong> in the subject line.</em></p>
                             </div>
 
                             <div class="policy-box policy-revision">
@@ -631,7 +633,7 @@
             <h2>About J. D. Charlot, Sr.</h2>
             <div class="proprietor-card" style="display:flex; gap:3rem; background:var(--light-bg); padding:3rem; border:1px solid #eee; flex-wrap:wrap;">
                 <div style="flex: 1; min-width: 300px; height: 350px; background: #eee; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; color: #999;">
-                    [ HEADSHOT PLACEHOLDER ]
+                    <img src="profile-photo.jpg" alt="J.D. Charlot" style="width:100%; height:100%; object-fit: cover;">
                 </div>
                 <div style="flex: 2; min-width: 300px;">
                     <h3 style="color:var(--primary-navy); margin-top:0;">J. D. Charlot, Proprietor</h3>
