@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacred Trust Consulting | Excellence in Protocol & Design</title>
+    <title>Sacred Trust Consulting | Houston's Premier Ecclesiastical Design</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css" rel="stylesheet">
     
     <style>
@@ -67,11 +67,18 @@
         
         .hero-text { max-width: 900px; margin: 0 auto; font-size: 1.25rem; color: var(--primary-navy); text-align: center; font-style: italic; font-family: 'Times New Roman', serif; border-left: 4px solid var(--accent-gold); padding: 20px 40px; background: rgba(179, 147, 89, 0.05); }
 
-        h2 { font-family: 'Times New Roman', serif; color: var(--primary-navy); font-size: 2.2rem; text-align: center; margin-top: 4rem; margin-bottom: 3rem; position: relative; text-transform: uppercase; letter-spacing: 1px; }
+        h2 { font-family: 'Times New Roman', serif; color: var(--primary-navy); font-size: 2.2rem; text-align: center; margin-top: 4rem; margin-bottom: 2rem; position: relative; text-transform: uppercase; letter-spacing: 1px; }
         h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--accent-gold); margin: 15px auto; }
 
-        /* Mockup Grid */
-        .mockup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin: 3rem 0; }
+        /* Why Choose Us & Mockups */
+        .why-us-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .why-us-card { background: var(--white); padding: 2rem; border: 1px solid #eee; box-shadow: var(--shadow); border-top: 4px solid var(--accent-gold); transition: var(--transition); }
+        .why-us-card:hover { transform: translateY(-5px); }
+        .why-us-card h3 { color: var(--primary-navy); font-family: 'Times New Roman', serif; text-transform: uppercase; font-size: 1.1rem; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .why-us-card ul { padding-left: 20px; list-style: square; color: var(--text-muted); font-size: 0.95rem; }
+        .why-us-card li { margin-bottom: 8px; }
+
+        .mockup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 4rem; }
         .mockup-box { background: #fafafa; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #888; transition: var(--transition); text-align: center; padding: 20px; box-shadow: var(--shadow); overflow: hidden;}
         .mockup-box img { max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .mockup-caption { margin-top: 15px; font-weight: bold; color: var(--primary-navy); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
@@ -86,7 +93,7 @@
         .accordion-content { padding: 0; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #fff; }
         .form-padding { padding: 40px; border-top: 4px solid var(--accent-gold); }
 
-        /* Form Styles */
+        /* Form Elements */
         .form-row { display: flex; gap: 20px; margin-bottom: 15px; }
         .form-group { flex: 1; margin-bottom: 15px; }
         label { display: block; font-weight: bold; margin-bottom: 8px; color: var(--primary-navy); font-size: 0.9rem; }
@@ -111,8 +118,6 @@
         .policy-box { padding: 20px; border-radius: 4px; margin-bottom: 15px; }
         .policy-revision { background-color: var(--warning-bg); color: #856404; border: 1px solid #ffeeba; }
         .policy-payment { background-color: var(--info-bg); color: #0c5460; border: 1px solid #bee5eb; }
-        
-        /* New Email Box Style */
         .policy-email { background-color: var(--email-bg); color: var(--email-text); border: 1px solid var(--email-border); text-align: center; }
         .policy-email a { color: var(--email-text); text-decoration: underline; font-weight: bold; }
 
@@ -136,8 +141,9 @@
         <div class="brand">Sacred Trust Consulting</div>
         <div class="links">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="#why-choose-us">Why Choose Us</a>
             <a href="#orders">Order Forms</a>
+            <a href="#about">About</a>
         </div>
     </nav>
 
@@ -152,7 +158,7 @@
 
     <div class="container">
         
-<section id="why-choose-us">
+        <section id="why-choose-us">
             <h2>Why Choose Sacred Trust?</h2>
             <p style="text-align: center; max-width: 850px; margin: 0 auto 3rem; font-size: 1.15rem; color: var(--text-muted); font-style: italic;">
                 Houston's Premier Ecclesiastical Design and Protocol firm, where professional administration meets sacred tradition.
@@ -192,7 +198,7 @@
 
             <div class="mockup-grid">
                 <div class="mockup-box">
-                    <img src="program-mockup.png" alt="Houston's Premier Funeral Program Design">
+                    <img src="program-mockup.jpg" alt="Houston's Premier Funeral Program Design">
                     <div class="mockup-caption">Custom Funeral Design & Print</div>
                 </div>
                 <div class="mockup-box">
@@ -203,7 +209,7 @@
         </section>
 
         <section id="orders" class="accordion-section">
-            <h2>Place Your Order</h2>
+            <h2>Online Order Intake</h2>
             <p style="text-align: center; margin-bottom: 2rem;">Select the appropriate form below to begin your consultation.</p>
 
             <div class="accordion-item">
@@ -268,10 +274,10 @@
                             <div id="shield-options" class="conditional-box">
                                 <label>Shield Division Style:</label>
                                 <div class="checkbox-grid">
-                                    <label class="checkbox-item"><input type="radio" name="division" value="Single Field"> Single Field (No divisions)</label>
-                                    <label class="checkbox-item"><input type="radio" name="division" value="Per Pale"> Per Pale (Vertical Split)</label>
-                                    <label class="checkbox-item"><input type="radio" name="division" value="Per Fess"> Per Fess (Horizontal Split)</label>
-                                    <label class="checkbox-item"><input type="radio" name="division" value="Quarterly"> Quarterly (4 Sections)</label>
+                                    <label class="checkbox-item"><input type="radio" name="division" value="Single Field"> Single Field</label>
+                                    <label class="checkbox-item"><input type="radio" name="division" value="Per Pale"> Per Pale</label>
+                                    <label class="checkbox-item"><input type="radio" name="division" value="Per Fess"> Per Fess</label>
+                                    <label class="checkbox-item"><input type="radio" name="division" value="Quarterly"> Quarterly</label>
                                 </div>
                             </div>
 
@@ -295,7 +301,7 @@
                                 </div>
                             </div>
 
-                            <div class="section-title"><i class="fas fa-arrows-left-right"></i> Flanking Options (External Elements)</div>
+                            <div class="section-title"><i class="fas fa-arrows-left-right"></i> Flanking Options</div>
                             <div class="checkbox-grid">
                                 <label class="checkbox-item"><input type="checkbox" name="flank" value="Processional Cross"> Processional Cross</label>
                                 <label class="checkbox-item"><input type="checkbox" name="flank" value="Keys"> Keys of the Kingdom</label>
@@ -378,24 +384,12 @@
                             
                             <div class="section-title"><i class="fas fa-address-book"></i> 1. Family Point of Contact</div>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>Primary Contact Name</label>
-                                    <input type="text" name="pocName" required placeholder="Responsible for order">
-                                </div>
-                                <div class="form-group">
-                                    <label>Relationship to Deceased</label>
-                                    <input type="text" name="pocRelation" placeholder="e.g., Son, Daughter">
-                                </div>
+                                <div class="form-group"><label>Primary Contact Name</label><input type="text" name="pocName" required></div>
+                                <div class="form-group"><label>Relationship to Deceased</label><input type="text" name="pocRelation"></div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>Email Address</label>
-                                    <input type="email" name="pocEmail" required placeholder="For proofs and billing">
-                                </div>
-                                <div class="form-group">
-                                    <label>Phone Number</label>
-                                    <input type="tel" name="pocPhone" required placeholder="(555) 123-4567">
-                                </div>
+                                <div class="form-group"><label>Email Address</label><input type="email" name="pocEmail" required></div>
+                                <div class="form-group"><label>Phone Number</label><input type="tel" name="pocPhone" required></div>
                             </div>
 
                             <div class="section-title"><i class="fas fa-dove"></i> 2. The Deceased</div>
@@ -404,35 +398,50 @@
                                     <label>Title / Honorific</label>
                                     <select name="title">
                                         <option value="" disabled selected>-- Select Title --</option>
+                                        <option value="Administrative Assistant">Administrative Assistant</option>
+                                        <option value="Apostle">Apostle</option>
+                                        <option value="Archbishop">Archbishop</option>
                                         <option value="Bishop">Bishop</option>
+                                        <option value="Brother">Brother</option>
+                                        <option value="Chief Apostle">Chief Apostle</option>
+                                        <option value="Chief Overseer">Chief Overseer</option>
+                                        <option value="Deacon">Deacon</option>
+                                        <option value="District Missionary">District Missionary</option>
+                                        <option value="Elect-Lady">Elect-Lady</option>
+                                        <option value="Elder">Elder</option>
+                                        <option value="Evangelist">Evangelist</option>
+                                        <option value="Father">Father</option>
+                                        <option value="Master">Master</option>
+                                        <option value="Minister">Minister</option>
+                                        <option value="Missionary">Missionary</option>
                                         <option value="Mother">Mother</option>
                                         <option value="Mr">Mr.</option>
                                         <option value="Mrs">Mrs.</option>
-                                        <option value="Rev">Rev.</option>
-                                        <option value="Dr">Dr.</option>
-                                        <option value="Apostle">Apostle</option>
+                                        <option value="Ms">Ms.</option>
+                                        <option value="National Evangelist">National Evangelist</option>
+                                        <option value="Overseer">Overseer</option>
+                                        <option value="Presiding Bishop">Presiding Bishop</option>
                                         <option value="Prophet">Prophet</option>
+                                        <option value="Prophetess">Prophetess</option>
+                                        <option value="Rabbi">Rabbi</option>
+                                        <option value="Rev">Reverend (Rev.)</option>
+                                        <option value="Shepherdess">Shepherdess</option>
+                                        <option value="Sister">Sister</option>
+                                        <option value="Suffragan Bishop">Suffragan Bishop</option>
+                                        <option value="Superintendent">Superintendent</option>
+                                        <option value="Supervisor">Supervisor</option>
                                     </select>
                                     <div class="checkbox-item" style="border:none; background:none; padding-left:0; margin-top:5px;">
                                         <input type="checkbox" id="addDr" name="addDr" value="Dr">
                                         <label for="addDr" style="font-weight: normal; margin:0; cursor:pointer;">Add "Dr." (e.g., Rev. Dr.)</label>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Full Legal Name</label>
-                                    <input type="text" name="fullName" placeholder="e.g., John Ray Doe, Sr." required>
-                                </div>
+                                <div class="form-group"><label>Full Legal Name</label><input type="text" name="fullName" required></div>
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>Sunrise (Date of Birth)</label>
-                                    <input type="date" name="dob" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Sunset (Date of Passing)</label>
-                                    <input type="date" name="dod" required>
-                                </div>
+                                <div class="form-group"><label>Sunrise</label><input type="date" name="dob" required></div>
+                                <div class="form-group"><label>Sunset</label><input type="date" name="dod" required></div>
                             </div>
 
                             <div class="section-title"><i class="fas fa-church"></i> 3. Service Details</div>
@@ -441,14 +450,12 @@
                                 <label class="checkbox-item"><input type="radio" name="viewingExists" value="Yes" onclick="toggleViewing('yes')"> Yes</label>
                                 <label class="checkbox-item"><input type="radio" name="viewingExists" value="No" onclick="toggleViewing('no')"> No</label>
                             </div>
-
                             <div id="viewingDetails" class="hidden-section">
-                                <label>Viewing Information</label>
-                                <textarea name="viewingInfo" rows="2" placeholder="e.g., 10:00 AM - 11:00 AM, prior to the service..."></textarea>
+                                <label>Viewing Info</label><textarea name="viewingInfo" rows="2"></textarea>
                             </div>
                             
-                            <div class="form-group" style="margin-top: 20px;">
-                                <label>Type of Service (Cover Text)</label>
+                            <div class="form-group" style="margin-top:20px;">
+                                <label>Type of Service</label>
                                 <div class="checkbox-grid">
                                     <label class="checkbox-item"><input type="checkbox" name="serviceType" value="Homegoing"> Homegoing</label>
                                     <label class="checkbox-item"><input type="checkbox" name="serviceType" value="Memorial"> Memorial</label>
@@ -457,87 +464,34 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>Service Date</label>
-                                    <input type="date" name="serviceDate" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Service Time</label>
-                                    <input type="time" name="serviceTime" required>
-                                </div>
+                                <div class="form-group"><label>Service Date</label><input type="date" name="serviceDate" required></div>
+                                <div class="form-group"><label>Service Time</label><input type="time" name="serviceTime" required></div>
                             </div>
-                            
-                            <div class="form-group">
-                                <label>Service Location</label>
-                                <textarea name="location" rows="2" placeholder="Church Name & Address"></textarea>
-                            </div>
+                            <div class="form-group"><label>Location</label><textarea name="location" rows="2" placeholder="Church Name & Address"></textarea></div>
+                            <div class="form-group"><label>Funeral Home</label><input type="text" name="funeralHome"></div>
+                            <div class="form-group"><label>Officiant</label><input type="text" name="officiant"></div>
 
-                            <div class="form-group">
-                                <label>Funeral Home Entrusted</label>
-                                <input type="text" name="funeralHome" placeholder="Name of Funeral Home">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Officiant / Eulogist</label>
-                                <input type="text" name="officiant" placeholder="e.g., Bishop James L. Smith">
-                            </div>
-
-                            <div class="section-title"><i class="fas fa-cross"></i> 4. Depository Details</div>
-                            <label>Final Disposition:</label>
+                            <div class="section-title"><i class="fas fa-cross"></i> 4. Depository</div>
                             <div class="checkbox-grid">
-                                <label class="checkbox-item"><input type="radio" name="disposition" value="Burial" onclick="toggleDisposition('burial')"> Burial / Interment</label>
+                                <label class="checkbox-item"><input type="radio" name="disposition" value="Burial" onclick="toggleDisposition('burial')"> Burial</label>
                                 <label class="checkbox-item"><input type="radio" name="disposition" value="Cremation" onclick="toggleDisposition('cremation')"> Cremation</label>
                             </div>
+                            <div id="burialDetails" class="hidden-section"><label>Cemetery Info</label><textarea name="cemeteryInfo" rows="2"></textarea></div>
+                            <div id="cremationDetails" class="hidden-section"><label>Cremation Text</label><textarea name="cremationText" rows="2"></textarea></div>
 
-                            <div id="burialDetails" class="hidden-section">
-                                <label>Cemetery Information</label>
-                                <textarea name="cemeteryInfo" rows="2" placeholder="Cemetery Name and Address..."></textarea>
-                            </div>
+                            <div class="section-title"><i class="fas fa-file-alt"></i> 5. Content</div>
+                            <div class="form-group"><label>Obituary</label><textarea name="obituary" rows="6"></textarea></div>
+                            <div class="form-group"><label>Order of Service</label><textarea name="orderOfService" rows="4"></textarea></div>
+                            <div class="form-group"><label>Poem</label><textarea name="poem" rows="4"></textarea></div>
+                            <div class="form-group"><label>Pallbearers</label><textarea name="pallbearers" rows="3"></textarea></div>
+                            <div class="form-group"><label>Acknowledgements</label><textarea name="acknowledgements" rows="3"></textarea></div>
 
-                            <div id="cremationDetails" class="hidden-section">
-                                <label>Cremation Acknowledgment</label>
-                                <textarea name="cremationText" rows="2" placeholder="Text to include in program..."></textarea>
-                            </div>
-
-                            <div class="section-title"><i class="fas fa-file-alt"></i> 5. Program Content</div>
-                            <div class="form-group">
-                                <label>Obituary Text</label>
-                                <textarea name="obituary" rows="6"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Order of Service Details</label>
-                                <textarea name="orderOfService" rows="4" placeholder="Musical Prelude, Prayer, Scripture Reading..."></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Poem (If space available)</label>
-                                <textarea name="poem" rows="4"></textarea>
-                            </div>
-                            
-                            <div class="policy-box" style="background-color: #f8f9f9; border: 1px solid #e0e0e0;">
-                                <label class="checkbox-item" style="background:none; border:none;">
-                                    <input type="checkbox" name="customPoem" value="Yes">
-                                    <strong>Custom Writing Service:</strong> Would you like us to provide a custom poem?
-                                </label>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Pallbearers</label>
-                                <textarea name="pallbearers" rows="3" placeholder="List names separated by commas..."></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Family Acknowledgements</label>
-                                <textarea name="acknowledgements" rows="3" placeholder="We would like to thank..."></textarea>
-                            </div>
-
-                            <div class="section-title"><i class="fas fa-print"></i> 6. Design, Formats & Add-ons</div>
+                            <div class="section-title"><i class="fas fa-print"></i> 6. Specs</div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label>Program Format</label>
+                                    <label>Format</label>
                                     <select name="programFormat">
-                                        <option value="" disabled selected>-- Select Program Type --</option>
+                                        <option value="" disabled selected>-- Select --</option>
                                         <optgroup label="Bi-Fold (Standard)">
                                             <option value="BiFold_4">Bi-Fold (4 Pages)</option>
                                             <option value="BiFold_8">Bi-Fold (8 Pages)</option>
@@ -558,54 +512,6 @@
                                         </optgroup>
                                     </select>
                                 </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Theme Preference</label>
-                                    <select name="theme">
-                                        <option value="custom">-- Select Theme --</option>
-                                        <option value="Religious">Religious / Cross / Dove</option>
-                                        <option value="Stairway">Stairway to Heaven / Clouds</option>
-                                        <option value="Floral">Floral / Garden</option>
-                                        <option value="Elegant">Elegant Black & Gold</option>
-                                        <option value="Minimalist">Modern / Minimalist</option>
-                                        <option value="Military">Military / Patriotic</option>
-                                        <option value="Landscape">Sunset / Landscape</option>
-                                        <option value="Custom">Other</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Color Scheme</label>
-                                    <select name="colors">
-                                        <option value="custom">-- Select Colors --</option>
-                                        <option value="RoyalBlue">Royal Blue & White/Gold</option>
-                                        <option value="Navy">Navy Blue</option>
-                                        <option value="Purple">Purple & Gold/Silver</option>
-                                        <option value="Red">Red & White</option>
-                                        <option value="Burgundy">Burgundy / Maroon</option>
-                                        <option value="Pink">Soft Pink</option>
-                                        <option value="Green">Emerald Green</option>
-                                        <option value="BlackGold">Black & Gold</option>
-                                        <option value="BlackSilver">Black & Silver</option>
-                                        <option value="White">All White / Gold</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="policy-box" style="background-color: #eaf2f8; border: 1px solid #d6eaf8;">
-                                <label style="color: var(--primary-navy);">Additional Keepsakes (Extra Cost)</label>
-                                <div class="checkbox-grid">
-                                    <label class="checkbox-item"><input type="checkbox" name="addCards" value="Yes"> Wake / Prayer Cards</label>
-                                    <label class="checkbox-item"><input type="checkbox" name="addBookmarks" value="Yes"> Memorial Bookmarks</label>
-                                </div>
-                            </div>
-
-                            <div class="form-row" style="margin-top: 20px;">
-                                <div class="form-group">
-                                    <label>Quantity</label>
-                                    <input type="number" name="quantity" min="50" step="50">
-                                </div>
                                 <div class="form-group">
                                     <label>Paper Finish</label>
                                     <select name="paperType">
@@ -615,53 +521,44 @@
                                     </select>
                                 </div>
                             </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group"><label>Quantity</label><input type="number" name="quantity" min="50" step="50"></div>
+                            </div>
 
                             <div class="policy-box policy-email">
                                 <h3 style="margin-top: 0; color: #0d47a1;"><i class="fas fa-envelope"></i> Photo Submission</h3>
-                                <p style="font-size:0.95rem;"><strong>The file upload function is currently disabled.</strong></p>
-                                <p>Please email your <strong>Cover Photo</strong> and any <strong>Collage Photos</strong> directly to:<br>
-                                <a href="mailto:houstonfuneralprograms@gmail.com">houstonfuneralprograms@gmail.com</a></p>
-                                <p style="font-size: 0.9rem; margin-bottom: 0;"><em>Please include the <strong>Name of the Deceased</strong> in the subject line.</em></p>
+                                <p style="font-size:0.9rem;"><strong>File upload disabled.</strong> Please email Cover Photo and Collage Photos to: <a href="mailto:houstonfuneralprograms@gmail.com">houstonfuneralprograms@gmail.com</a></p>
                             </div>
 
                             <div class="policy-box policy-revision">
-                                <h3>⚠️ Family Input & Revision Policy</h3>
-                                <p style="font-size:0.9rem;">We understand that at times families would like to share and have input from all grieving parties, but we have found this to be problematic. <strong>Please have a family meeting regarding the program prior to submitting this form as only 2 revisions will be allowed.</strong></p>
+                                <h3>⚠️ Revision Policy</h3>
+                                <p style="font-size:0.9rem;">Only 2 revisions allowed. Please gather all family input before submitting.</p>
                             </div>
 
                             <div class="policy-box policy-payment">
-                                <h3>💳 Deposit & Billing Policy</h3>
-                                <p style="font-size:0.9rem;"><strong>A 75% Non-Refundable deposit is due before any work will commence.</strong> When this form is sent, an invoice will be sent via email/text. Full payment is required before final printing/delivery.</p>
+                                <h3>💳 Payment Policy</h3>
+                                <p style="font-size:0.9rem;"><strong>75% Non-Refundable deposit</strong> required before work begins.</p>
                             </div>
 
                             <div class="certification-box">
-                                <h3 style="color: var(--error); margin-top:0;">✅ Certification of Accuracy</h3>
-                                <p style="margin-bottom: 20px; font-size: 0.9em; color: #555;">
-                                    By signing below, you acknowledge that you have reviewed the spelling of names, dates, and locations. Sacred Trust Consulting is not responsible for re-printing costs associated with errors submitted in this form.
-                                </p>
+                                <h3 style="color: var(--error); margin-top:0;">✅ Certification</h3>
                                 <label class="checkbox-item" style="background:white;">
                                     <input type="checkbox" name="accuracyCheck" value="Agreed" required>
-                                    I certify that the information provided is correct, and I agree to the Revision Limit and Non-Refundable Deposit policies stated above.
+                                    I certify that information is correct and agree to policies.
                                 </label>
                                 <div class="form-row" style="margin-top:15px;">
-                                    <div class="form-group">
-                                        <label>Digital Signature</label>
-                                        <input type="text" name="digitalSignature" required placeholder="/s/ Your Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Date</label>
-                                        <input type="date" id="signDate" name="signDate" required>
-                                    </div>
+                                    <div class="form-group"><label>Digital Signature</label><input type="text" name="digitalSignature" required></div>
+                                    <div class="form-group"><label>Date</label><input type="date" id="signDate" name="signDate" required></div>
                                 </div>
                             </div>
 
-                            <button type="submit" class="submit-btn">Submit Order to Sacred Trust</button>
-           </form>
+                            <button type="submit" class="submit-btn">Submit Order</button>
+                        </form>
                     </div>
                 </div>
             </div>
 
-            <div class="accordion-item">
             <div class="accordion-item">
                 <button class="accordion-header">Order Form: Episcopal Consecration Booklet</button>
                 <div class="accordion-content">
@@ -676,21 +573,18 @@
                                 <div class="form-group"><label>Email</label><input type="email" name="contactEmail" required></div>
                             </div>
 
-                            <div class="section-title"><i class="fas fa-user-graduate"></i> Bishop-Designate Information</div>
+                            <div class="section-title"><i class="fas fa-user-graduate"></i> Bishop-Designate</div>
                             <div class="form-row">
-                                <div class="form-group"><label>Designate Name</label><input type="text" name="designateName" required></div>
+                                <div class="form-group"><label>Name</label><input type="text" name="designateName" required></div>
                                 <div class="form-group"><label>Church Name</label><input type="text" name="churchName" required></div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group"><label>Designate Email</label><input type="email" name="designateEmail"></div>
-                                <div class="form-group"><label>Designate Phone</label><input type="tel" name="designatePhone"></div>
+                                <div class="form-group"><label>Email</label><input type="email" name="designateEmail"></div>
+                                <div class="form-group"><label>Phone</label><input type="tel" name="designatePhone"></div>
                             </div>
 
                             <div class="section-title"><i class="fas fa-users-rays"></i> The Consecrators</div>
-                            <div class="form-group">
-                                <label>Chief Consecrator</label>
-                                <input type="text" name="chiefConsecrator" placeholder="Full Name and Title">
-                            </div>
+                            <div class="form-group"><label>Chief Consecrator</label><input type="text" name="chiefConsecrator"></div>
                             <label>Co-Consecrators (List up to 6)</label>
                             <div class="checkbox-grid" style="grid-template-columns: 1fr 1fr;">
                                 <input type="text" name="coConsecrator1" placeholder="1. Name/Title">
@@ -700,27 +594,21 @@
                                 <input type="text" name="coConsecrator5" placeholder="5. Name/Title">
                                 <input type="text" name="coConsecrator6" placeholder="6. Name/Title">
                             </div>
-<div class="policy-box policy-email">
-                                <h3 style="margin-top: 0; color: #0d47a1;"><i class="fas fa-envelope"></i> Photo Submission</h3>
-                                <p style="font-size:0.95rem;"><strong>The file upload function is currently disabled.</strong></p>
-                                <p>Please email your <strong>Cover Photo</strong> and any <strong>Collage Photos</strong> directly to:<br>
-                                <a href="mailto:houstonfuneralprograms@gmail.com">houstonfuneralprograms@gmail.com</a></p>
-                                <p style="font-size: 0.9rem; margin-bottom: 0;"><em>Please include the <strong>Name of the Deceased</strong> in the subject line.</em></p>
+
                             <div class="section-title"><i class="fas fa-calendar-alt"></i> Service Details</div>
                             <div class="form-row">
-                                <div class="form-group"><label>Date of Consecration</label><input type="date" name="consecrationDate"></div>
-                                <div class="form-group"><label>Location</label><input type="text" name="consecrationLocation" placeholder="Church Name & Address"></div>
+                                <div class="form-group"><label>Date</label><input type="date" name="consecrationDate"></div>
+                                <div class="form-group"><label>Location</label><input type="text" name="consecrationLocation"></div>
                             </div>
 
-                            <div class="section-title"><i class="fas fa-book-open"></i> Program Content & Bios</div>
-                            <small style="display:block; margin-bottom:10px; color:var(--primary-navy);">*If you provide basic info, we will supplement bios if necessary.</small>
+                            <div class="section-title"><i class="fas fa-book-open"></i> Content & Bios</div>
                             <div class="form-group"><label>Program Contents</label><textarea name="progContent" rows="3"></textarea></div>
                             <div class="form-group"><label>Consecrator Bios</label><textarea name="consecratorBios" rows="3"></textarea></div>
-                            <div class="form-group"><label>Bishop Designate(s) Bios</label><textarea name="designateBios" rows="3"></textarea></div>
+                            <div class="form-group"><label>Bishop Designate Bios</label><textarea name="designateBios" rows="3"></textarea></div>
                             <div class="form-group"><label>Homilist Bio</label><textarea name="homilistBio" rows="3"></textarea></div>
-                            <div class="form-group"><label>Special Thanks / Acknowledgements</label><textarea name="specialThanks" rows="3"></textarea></div>
+                            <div class="form-group"><label>Special Thanks</label><textarea name="specialThanks" rows="3"></textarea></div>
 
-                            <div class="section-title"><i class="fas fa-print"></i> Booklet Specs</div>
+                            <div class="section-title"><i class="fas fa-print"></i> Specs</div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Page Count</label>
@@ -734,7 +622,11 @@
                                 <div class="form-group"><label>Quantity</label><input type="number" name="quantity" min="25" step="25"></div>
                             </div>
 
-                            <button type="submit" class="submit-btn">Submit Consecration Order</button>
+                            <div class="policy-box policy-email">
+                                <p style="font-size:0.9rem;">Email Headshots/Seals to: <a href="mailto:houstonfuneralprograms@gmail.com">houstonfuneralprograms@gmail.com</a></p>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Order</button>
                         </form>
                     </div>
                 </div>
@@ -750,16 +642,13 @@
                                 <div class="form-group"><label>Event Name</label><input type="text" name="eventName" required></div>
                                 <div class="form-group"><label>Date/Time</label><input type="text" name="eventDateTime" required></div>
                             </div>
-                            <div class="form-group"><label>Event Location/Link</label><input type="text" name="eventLocation"></div>
-                            <div class="form-group"><label>Details / Key Speakers / Theme</label><textarea name="flyerDetails" rows="4"></textarea></div>
-                            <div class="form-group"><label>Preferred Color Scheme</label><input type="text" name="flyerColors"></div>
-<div class="policy-box policy-email">
-                                <h3 style="margin-top: 0; color: #0d47a1;"><i class="fas fa-envelope"></i> Photo Submission</h3>
-                                <p style="font-size:0.95rem;"><strong>The file upload function is currently disabled.</strong></p>
-                                <p>Please email your <strong>Cover Photo</strong> and any <strong>Collage Photos</strong> directly to:<br>
-                                <a href="mailto:houstonfuneralprograms@gmail.com">houstonfuneralprograms@gmail.com</a></p>
-                                <p style="font-size: 0.9rem; margin-bottom: 0;"><em>Please include the <strong>Name of the Deceased</strong> in the subject line.</em></p>
-                            <button type="submit" class="submit-btn">Submit Flyer Request</button>
+                            <div class="form-group"><label>Location/Link</label><input type="text" name="eventLocation"></div>
+                            <div class="form-group"><label>Details/Speakers</label><textarea name="flyerDetails" rows="4"></textarea></div>
+                            <div class="form-group"><label>Color Scheme</label><input type="text" name="flyerColors"></div>
+                            <div class="policy-box policy-email">
+                                <p>Email Photos/Logos to: <a href="mailto:houstonfuneralprograms@gmail.com">houstonfuneralprograms@gmail.com</a></p>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit Request</button>
                         </form>
                     </div>
                 </div>
@@ -771,21 +660,21 @@
                     <div class="form-padding">
                         <form action="https://formspree.io/f/mzdarwzb" method="POST">
                             <input type="hidden" name="_subject" value="New Order: Certificates">
-                            <div class="form-group"><label>Recipient Name(s)</label><textarea name="recipientNames" rows="2" placeholder="List names exactly as they should appear"></textarea></div>
+                            <div class="form-group"><label>Recipient Name(s)</label><textarea name="recipientNames" rows="3"></textarea></div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Type</label>
                                     <select name="certType">
                                         <option value="Licensure">Ministerial Licensure</option>
-                                        <option value="Ordination">Ordination Certificate</option>
-                                        <option value="Consecration">Consecration Certificate</option>
+                                        <option value="Ordination">Ordination</option>
+                                        <option value="Consecration">Consecration</option>
                                         <option value="Other">Other</option>
                                     </select>
                                 </div>
-                                <div class="form-group"><label>Date of Ceremony</label><input type="date" name="certDate"></div>
+                                <div class="form-group"><label>Date</label><input type="date" name="certDate"></div>
                             </div>
-                            <div class="form-group"><label>Signatory Names/Titles</label><textarea name="signatories" rows="2" placeholder="e.g. Bishop John Doe, Presiding"></textarea></div>
-                            <button type="submit" class="submit-btn">Submit Certificate Order</button>
+                            <div class="form-group"><label>Signatories</label><textarea name="signatories" rows="2"></textarea></div>
+                            <button type="submit" class="submit-btn">Submit Order</button>
                         </form>
                     </div>
                 </div>
