@@ -658,27 +658,266 @@
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <button class="accordion-header">Order Form: License/Ordination Certificates</button>
+        <div class="accordion-item">
+                <button class="accordion-header">Order Form: Credentials & Certificates</button>
                 <div class="accordion-content">
                     <div class="form-padding">
                         <form action="https://formspree.io/f/mzdarwzb" method="POST">
                             <input type="hidden" name="_subject" value="New Order: Certificates">
-                            <div class="form-group"><label>Recipient Name(s)</label><textarea name="recipientNames" rows="3"></textarea></div>
+
+                            <div class="section-title"><i class="fas fa-scroll"></i> 1. Select Certificate Text</div>
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Please select the wording template for these certificates:</p>
+                            
+                            <div class="certificate-selection-group" style="display: flex; flex-direction: column; gap: 15px;">
+                                
+                                <div class="radio-box" style="border: 1px solid #ddd; padding: 15px; border-radius: 4px; background: #fafafa;">
+                                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                                        <input type="radio" name="certTemplate" value="Baptist_Traditional" style="margin-top: 5px;" required>
+                                        <div style="width: 100%;">
+                                            <strong>Option A: Baptist / Traditional</strong><br>
+                                            <span style="font-size: 0.85rem; color: var(--deep-gold);">"Preach the word; be instant in season..."</span>
+                                            <details style="margin-top: 10px; font-size: 0.85rem; color: #555; background: #fff; padding: 10px; border: 1px dashed #ccc;">
+                                                <summary style="cursor: pointer; color: var(--primary-navy);"><strong>View Full Text</strong></summary>
+                                                <p>...having publicly professed faith in the Lord Jesus Christ, and having given satisfactory evidence of a call to the Gospel Ministry, was duly examined and approved by the Church, is hereby ORDAINED to the Gospel Ministry and authorized to preach the Word of God, administer the ordinances of Baptism and the Lord’s Supper, and to shepherd the flock of God as the Lord may direct...</p>
+                                            </details>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="radio-box" style="border: 1px solid #ddd; padding: 15px; border-radius: 4px; background: #fafafa;">
+                                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                                        <input type="radio" name="certTemplate" value="Apostolic_Pentecostal">
+                                        <div style="width: 100%;">
+                                            <strong>Option B: Apostolic / Pentecostal</strong><br>
+                                            <span style="font-size: 0.85rem; color: var(--deep-gold);">"Sound in Apostolic doctrine..."</span>
+                                            <details style="margin-top: 10px; font-size: 0.85rem; color: #555; background: #fff; padding: 10px; border: 1px dashed #ccc;">
+                                                <summary style="cursor: pointer; color: var(--primary-navy);"><strong>View Full Text</strong></summary>
+                                                <p>...having testified to a divine calling, and having been found sound in Apostolic doctrine, holy in conduct, and faithful in service, was, through fasting, prayer, and the laying on of hands, this day ORDAINED to the Gospel Ministry according to the pattern set forth in the Holy Scriptures...</p>
+                                            </details>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="radio-box" style="border: 1px solid #ddd; padding: 15px; border-radius: 4px; background: #fafafa;">
+                                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                                        <input type="radio" name="certTemplate" value="Ecumenical_General">
+                                        <div style="width: 100%;">
+                                            <strong>Option C: Ecumenical / General</strong><br>
+                                            <span style="font-size: 0.85rem; color: var(--deep-gold);">"Service of the people of God..."</span>
+                                            <details style="margin-top: 10px; font-size: 0.85rem; color: #555; background: #fff; padding: 10px; border: 1px dashed #ccc;">
+                                                <summary style="cursor: pointer; color: var(--primary-navy);"><strong>View Full Text</strong></summary>
+                                                <p>...having been discerned as called of God to ordained ministry, and having met the requirements established by the Church, was prayerfully set apart and ORDAINED to the ministry of Word and Sacrament for the building up of the Body of Christ...</p>
+                                            </details>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="radio-box" style="border: 1px solid #ddd; padding: 15px; border-radius: 4px; background: #fafafa;">
+                                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                                        <input type="radio" name="certTemplate" value="Custom_Text" id="custom-radio" onclick="document.getElementById('custom-text-area').style.display = 'block'">
+                                        <div style="width: 100%;">
+                                            <strong>Option D: Custom Text</strong><br>
+                                            <textarea id="custom-text-area" name="customCertText" rows="4" style="display:none; width: 100%; margin-top: 10px;" placeholder="Paste your custom wording here..."></textarea>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-tag"></i> 2. Classification</div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label>Type</label>
-                                    <select name="certType">
-                                        <option value="Licensure">Ministerial Licensure</option>
-                                        <option value="Ordination">Ordination</option>
-                                        <option value="Consecration">Consecration</option>
-                                        <option value="Other">Other</option>
+                                    <label>Certification Type (Header)</label>
+                                    <select name="certificationType" required>
+                                        <option value="" disabled selected>-- Select Header --</option>
+                                        <option value="Certificate of Licensure">Certificate of Licensure</option>
+                                        <option value="Certificate of Ordination">Certificate of Ordination</option>
+                                        <option value="Certificate of Commission">Certificate of Commission</option>
+                                        <option value="Certificate of Appointment">Certificate of Appointment</option>
                                     </select>
                                 </div>
-                                <div class="form-group"><label>Date</label><input type="date" name="certDate"></div>
+                                <div class="form-group">
+                                    <label>Date of Service</label>
+                                    <input type="date" name="serviceDate" required>
+                                </div>
                             </div>
-                            <div class="form-group"><label>Signatures</label><textarea name="signatories" rows="2"></textarea></div>
-                            <button type="submit" class="submit-btn">Submit Order</button>
+
+                            <div class="section-title"><i class="fas fa-users"></i> 3. Recipient List (Limit 10)</div>
+                            <p style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">Enter the Full Legal Name and Title for each recipient.</p>
+                            
+                            <div class="recipient-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 1</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec1_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec1_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 2</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec2_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec2_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 3</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec3_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec3_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 4</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec4_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec4_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 5</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec5_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec5_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 6</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec6_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec6_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 7</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec7_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec7_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 8</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec8_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec8_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 9</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec9_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec9_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fdfbf7; padding: 10px; border: 1px solid #eee;">
+                                    <label style="font-size: 0.8rem; color: var(--accent-gold);">Recipient 10</label>
+                                    <div style="display: flex; gap: 5px;">
+                                        <input type="text" name="rec10_name" placeholder="Full Name" style="flex: 2;">
+                                        <select name="rec10_title" style="flex: 1;">
+                                            <option value="Minister">Minister</option>
+                                            <option value="Reverend">Reverend</option>
+                                            <option value="Elder">Elder</option>
+                                            <option value="Evangelist">Evangelist</option>
+                                            <option value="Elect-Lady">Elect-Lady</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 15px;">
+                                <label>If "Other" Title was selected, please specify here:</label>
+                                <input type="text" name="otherTitles" placeholder="e.g. Recipient 1 is 'Canon', Recipient 3 is 'Missionary'">
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-pen-fancy"></i> 4. Authority & Signatures</div>
+                            <div class="form-group">
+                                <label>Issuing Body (Church/Organization Name)</label>
+                                <input type="text" name="issuingBody" placeholder="e.g. Greater Mount Zion Baptist Church" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>City & State of Issue</label>
+                                    <input type="text" name="issueLocation" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Signatories (Names & Titles)</label>
+                                <textarea name="signatories" rows="2" placeholder="e.g. Bishop J.D. Charlot, Presiding Prelate; Elder John Doe, General Secretary"></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Credential Order</button>
                         </form>
                     </div>
                 </div>
