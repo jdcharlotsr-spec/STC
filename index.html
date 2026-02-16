@@ -677,8 +677,130 @@
                                 </div>
                                 <div class="form-group"><label>Date</label><input type="date" name="certDate"></div>
                             </div>
-                            <div class="form-group"><label>Signatories</label><textarea name="signatories" rows="2"></textarea></div>
+                            <div class="form-group"><label>Signatures</label><textarea name="signatories" rows="2"></textarea></div>
                             <button type="submit" class="submit-btn">Submit Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Order Form: Souvenir Journal</button>
+                <div class="accordion-content">
+                    <div class="form-padding">
+                        <form action="https://formspree.io/f/mzdarwzb" method="POST">
+                            <input type="hidden" name="_subject" value="New Order: Souvenir Journal">
+                            
+                            <div class="section-title"><i class="fas fa-church"></i> Organization & Event</div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Church / Organization Name *</label>
+                                    <input type="text" name="orgName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Event / Occasion *</label>
+                                    <input type="text" name="eventOccasion" placeholder="e.g. 50th Church Anniversary" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Event Date</label>
+                                    <input type="date" name="eventDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Event Location</label>
+                                    <input type="text" name="eventLocation">
+                                </div>
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-user-tie"></i> Leadership & Guests</div>
+                            <div class="form-group">
+                                <label>Host Leadership Name & Title</label>
+                                <input type="text" name="leaderNameTitle" placeholder="e.g. Bishop & Lady J.D. Charlot">
+                            </div>
+                            <div class="form-group">
+                                <label>Leadership Bio / Welcome Message</label>
+                                <textarea name="leaderBio" rows="4" placeholder="Paste bio text or welcome greeting here..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Guest Speaker(s) Bio</label>
+                                <textarea name="guestSpeakerBio" rows="4" placeholder="Name and Bio of guest speaker(s)..."></textarea>
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-book"></i> Journal Specifications</div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Estimated Page Count</label>
+                                    <select name="pageCount">
+                                        <option value="" disabled selected>-- Select Pages --</option>
+                                        <option value="20-40">20 - 40 Pages</option>
+                                        <option value="40-60">40 - 60 Pages</option>
+                                        <option value="60-100">60 - 100 Pages</option>
+                                        <option value="100+">100+ Pages</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Estimated Ad Count</label>
+                                    <input type="number" name="adCount" placeholder="Total number of ads">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Book Size</label>
+                                    <select name="bookSize">
+                                        <option value="Standard Letter">Standard (8.5 x 11)</option>
+                                        <option value="Digest Half-Size">Digest / Half-Size (5.5 x 8.5)</option>
+                                        <option value="Square">Square Custom</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Binding Style</label>
+                                    <select name="bindingStyle">
+                                        <option value="Saddle Stitch">Saddle Stitch (Stapled Spine)</option>
+                                        <option value="Perfect Bind">Perfect Bind (Flat glued spine - Book style)</option>
+                                        <option value="Spiral Coil">Spiral Coil</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Printing Quantity (Min. 100)</label>
+                                <select name="printQuantity" required>
+                                    <option value="" disabled selected>-- Select Quantity --</option>
+                                    <option value="100">100 Copies</option>
+                                    <option value="150">150 Copies</option>
+                                    <option value="200">200 Copies</option>
+                                    <option value="250">250 Copies</option>
+                                    <option value="300+">300+ (Quote Required)</option>
+                                </select>
+                            </div>
+
+                            <div class="section-title"><i class="fas fa-address-card"></i> Point of Contact</div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Contact Name</label>
+                                    <input type="text" name="pocName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Contact Phone</label>
+                                    <input type="tel" name="pocPhone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Email</label>
+                                <input type="email" name="pocEmail" required>
+                            </div>
+
+                            <div class="policy-box policy-email">
+                                <h3 style="margin-top: 0; color: #0d47a1;"><i class="fas fa-cloud-upload-alt"></i> Asset Submission</h3>
+                                <p style="font-size:0.9rem;">
+                                    <strong>Important:</strong> Please email all high-resolution photos, ad copy, and logos to: 
+                                    <a href="mailto:houstonfuneralprograms@gmail.com">houstonfuneralprograms@gmail.com</a>. 
+                                    <br><em>All content will be professionally formatted for print.</em>
+                                </p>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Journal Inquiry</button>
                         </form>
                     </div>
                 </div>
